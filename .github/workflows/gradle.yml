@@ -40,13 +40,7 @@ jobs:
       run: ./gradlew check
 
     - name: Assemble JAR
-      run: ./gradlew assemble
-
-    - name: Publish JAR to GitHub Packages
-      run: ./gradlew publish
-      env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+      run: ./gradlew assemble  
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
